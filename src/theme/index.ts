@@ -5,6 +5,7 @@ export const THEME = extendTheme({
     green: {
       700: '#00875F',
       500: '#00B37E',
+      400: '#3BBFA7'
     },
     blue: {
       800: '#084088',
@@ -12,6 +13,14 @@ export const THEME = extendTheme({
       500: '#1797C5',
       300: '#93E0EE',
       200: '#CBF0F8',
+    },
+    orange: {
+      800: '#F2937E',
+      500: '#F2BF91',
+      400: '#F2E0D0'
+    },
+    meteorite: {
+      1: '#433D3F'
     },
     gray: {
       700: '#121214',
@@ -24,7 +33,8 @@ export const THEME = extendTheme({
     },
     white: '#FFFFFF',
     red: {
-      500: '#F75A68'
+      700: '#D9667B',
+      500: '#F75A68',
     }
   },
   fonts: {

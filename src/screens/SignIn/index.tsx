@@ -2,9 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import { VStack, Image, Text, Center, Heading, ScrollView } from "native-base";
 
 import { AuthNavigationRouteProps } from '@routes/auth.routes';
-import LogoSvg from '@assets/logo.svg';
-import LogoTest from '@assets/logo.png'
-import BackgroundImg from '@assets/background.png';
+import Logo from '@assets/Listify.png'
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 
@@ -20,49 +18,45 @@ export function SignIn() {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
       <VStack flex={1} px={10} pb={16}>
-        <Image
-          source={BackgroundImg}
-          defaultSource={BackgroundImg}
-          alt="Pessoa comprando"
-          resizeMode="contain"
-          blurRadius={8}
-          position="absolute"
-        />
-
-        <Center mt={24}>
+        <Center mt={20}>
           <Image
-            source={LogoTest}
-            width={48}
-            height={48}
+            source={Logo}
+            width="250px"
+            height="250px"
+            alt='logo'
           />
         </Center>
 
         <Center>
-          <Heading color="white" fontSize="xl" mb={6} fontFamily="heading" fontWeight="bold">
-            Acesse sua conta
+          <Heading color="#D9667B" mt={-10} mb={6}>
+            <Text style={{ fontFamily: 'Inter_700Bold', fontSize: 20 }}>
+              acesse sua conta
+            </Text>
           </Heading>
 
           <Input
-            placeholder="E-mail"
+            placeholder="e-mail"
             keyboardType="email-address"
             autoCapitalize="none"
+            fontFamily="Inter_400Regular"
           />
 
           <Input
-            placeholder="Senha"
+            placeholder="senha"
+            fontFamily="Inter_400Regular"
             secureTextEntry
           />
 
-          <Button title="Acessar" />
+          <Button title="acessar" />
         </Center>
 
         <Center mt={12}>
-          <Text color="white" fontSize="sm" mb={3} fontFamily="body">
-            Ainda não tem acesso?
+          <Text color="red.700" mb={3} style={{ fontFamily: 'Inter_600SemiBold', fontsize: 14 }}>
+            ainda não tem acesso?
           </Text>
 
           <Button
-            title="Criar conta"
+            title="criar conta"
             variant="outline"
             onPress={handleNewAccount}
           />

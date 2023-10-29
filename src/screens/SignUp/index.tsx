@@ -1,8 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { VStack, Image, Text, Center, Heading, ScrollView } from "native-base";
 
-import LogoPng from '@assets/logo.png';
-import BackgroundImg from '@assets/background.png';
+import Logo from '@assets/Listify.png'
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 
@@ -17,48 +16,45 @@ export function SignUp() {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
       <VStack flex={1} px={10} pb={16}>
-        <Image
-          source={BackgroundImg}
-          defaultSource={BackgroundImg}
-          resizeMode="contain"
-          alt="Pessoa comprando"
-          blurRadius={8}
-          position="absolute"
-        />
-
-        <Center mt={24}>
+        <Center mt={20}>
           <Image
-            source={LogoPng}
-            width={48}
-            height={48}
+            source={Logo}
+            width="250px"
+            alt='logo'
+            height="250px"
           />
         </Center>
 
         <Center>
-          <Heading color="white" fontSize="xl" mb={6} fontFamily="heading">
-            Crie sua conta
+          <Heading color="red.700" mt={-10} mb={6} >
+            <Text style={{ fontFamily: 'Inter_700Bold', fontSize: 20 }}>
+              crie sua conta
+            </Text>
           </Heading>
 
           <Input
-            placeholder="Nome"
+            fontFamily="Inter_400Regular"
+            placeholder="nome"
           />
 
           <Input
-            placeholder="E-mail"
+            placeholder="e-mail"
             keyboardType="email-address"
+            fontFamily="Inter_400Regular"
             autoCapitalize="none"
           />
 
           <Input
-            placeholder="Senha"
+            placeholder="senha"
+            fontFamily="Inter_400Regular"
             secureTextEntry
           />
 
-          <Button title="Criar e acessar" />
+          <Button title="criar e acessar" />
         </Center>
 
         <Button
-          title="Voltar para o login"
+          title="voltar para o login"
           variant="outline"
           mt={12}
           onPress={handleGoBack}

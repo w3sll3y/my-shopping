@@ -8,10 +8,10 @@ export function Routes() {
   const { colors } = useTheme();
 
   const theme = DefaultTheme;
-  theme.colors.background = colors.blue[300];
+  theme.colors.background = '#CBF0F8';
 
   return (
-    <Box flex={1} bg="red">
+    <Box flex={1} style={{ backgroundColor: '#F2E0D0', position: 'relative' }}>
       <NavigationContainer theme={theme}>
         <AppRoutes />
       </NavigationContainer>
